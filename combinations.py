@@ -15,7 +15,7 @@ class getCombinationsClass:
 	def combinationUtil(self,array,array_index,current_combo, current_combo_index,k):
 
 		if current_combo_index == k:
-			self.final.append(current_combo)
+			self.final.append(current_combo[:])
 			return
 		
 		if array_index >= len(array):
@@ -42,7 +42,7 @@ def getCombinations(array,k):
 def getCombinationsUtil(array,array_index,current_combo, current_combo_index,k):
 
 	if current_combo_index == k:
-		return [current_combo]
+		return [current_combo[:]]
 	
 	if array_index >= len(array):
 		return []
